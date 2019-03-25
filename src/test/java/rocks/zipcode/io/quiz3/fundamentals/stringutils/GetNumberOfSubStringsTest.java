@@ -12,7 +12,7 @@ public class GetNumberOfSubStringsTest {
     public void test1() {
         // given
         String input = "Bracer";
-        Integer expected = 20;
+        Integer expected = 21;
 
         // when
         Integer actual = StringUtils.getNumberOfSubStrings(input);
