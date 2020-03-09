@@ -61,15 +61,28 @@ public class TicTacToe {
     }
 
     public Boolean isRowHomogenous(Integer rowIndex) {
-        return null;
+        if (board[rowIndex][0] == board[rowIndex][1] && board[rowIndex][0] == board[rowIndex][2]){
+            return true;
+        }
+        return false;
     }
 
     public Boolean isColumnHomogeneous(Integer columnIndex) {
-        return null;
+        if (board[0][columnIndex] == board[1][columnIndex] && board[0][columnIndex] == board[2][columnIndex]){
+        return true;}
+        return false;
     }
 
     public String getWinner() {
-        return null;
+        if (board[0][0].equals("O") && board[0][1].equals("O") && board[0][2].equals("O") ||
+        (board[1][0].equals("O") && board[1][1].equals("O") && board[1][2].equals("O")) ||
+        (board[0][0].equals("O") && board[1][0].equals("O") && board[2][0].equals("O")) ||
+        (board[0][1].equals("O") && board[1][1].equals("O") && board[2][1].equals("O")) ||
+        (board[0][2].equals("O") && board[1][2].equals("O") && board[2][2].equals("O")) ||
+        (board[0][0].equals("O") && board[1][1].equals("O") && board[2][2].equals("O")) ||
+        (board[0][2].equals("O") && board[1][1].equals("O") && board[2][0].equals("O")) ||
+        (board[2][0].equals("O") && board[2][1].equals("O") && board[2][2].equals("O"))){return "O";}
+        else return "X";
     }
 
     public String[][] getBoard() {
