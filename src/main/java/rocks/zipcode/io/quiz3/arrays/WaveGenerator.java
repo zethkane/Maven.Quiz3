@@ -11,9 +11,9 @@ public class WaveGenerator {
         String finalString = "";
         finalString += newStr;
         for (int i = 0; i < splitted.length ; i++) {
-            for (int j = 0; j < splitted.length - 1 ; j++) {
+            for (int j = 0; j < wavey.length ; j++) {
                 if( i == j){
-                    splitted[i] += newStr.toUpperCase().charAt(i);
+                    splitted[i].replace(splitted[i],splitted[i].toUpperCase());
                 }
                 splitted[i] += wavey[j];
             }
